@@ -1,0 +1,18 @@
+
+Inferred THREE-STATE control devices in process 
+	in routine MPU line 55 in
+         file 'H:/SMS_top_design/MPU/MPU.v'.
+============================================================================
+|     Three-state Device Name      |               Type               | MB |
+============================================================================
+|         Data_out_tri<7>          |        Three-state Buffer        | N  |
+|         Data_out_tri<3>          |        Three-state Buffer        | N  |
+|         Data_out_tri<5>          |        Three-state Buffer        | N  |
+|         Data_out_tri<1>          |        Three-state Buffer        | N  |
+|         Data_out_tri<4>          |        Three-state Buffer        | N  |
+|         Data_out_tri<0>          |        Three-state Buffer        | N  |
+|         Data_out_tri<2>          |        Three-state Buffer        | N  |
+|         Data_out_tri<6>          |        Three-state Buffer        | N  |
+============================================================================
+
+Writing to hnl file 'H:\FINAL_PROCESSOR\SYNTHESIS/PLAN_C/workdirs/WORK/MPU.hnl'

@@ -1,0 +1,40 @@
+
+Inferred memory devices in process 
+	in routine BRgen line 30 in file
+         'H:/FINAL_PROCESSOR/VDP_DEBUG/BRgen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      BRRx_reg       | Flip-flop |   1   |  -  | -  | N  | N  | N  | N  | N  |
+|      BRTx_reg       | Flip-flop |   1   |  -  | -  | N  | N  | N  | N  | N  |
+|    counter16_reg    | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|     counter_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     divisor_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+BRRx_reg
+--------
+    set/reset/toggle: none
+
+
+BRTx_reg
+--------
+    set/reset/toggle: none
+
+
+counter16_reg (width 5)
+-----------------------
+    set/reset/toggle: none
+
+
+counter_reg (width 16)
+----------------------
+    set/reset/toggle: none
+
+
+divisor_reg (width 16)
+----------------------
+    set/reset/toggle: none
+
+
+Writing to hnl file 'H:\FINAL_PROCESSOR\SYNTHESIS/PLAN_C/workdirs/WORK/BRgen.hnl'

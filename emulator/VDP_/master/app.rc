@@ -1,0 +1,160 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Load Rom",                    ID_FILE_LOADROM
+        MENUITEM SEPARATOR
+        MENUITEM "Reset\tAlt+R",                ID_FILE_RESET
+        MENUITEM "Free Rom",                    ID_FILE_FREEROM
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "PAL",                         ID_SETUP_PAL
+        MENUITEM "Japan",                       ID_SETUP_JAPAN
+        MENUITEM "FM Chip",                     ID_SETUP_FMCHIP
+        MENUITEM SEPARATOR
+        POPUP "Overlay"
+        BEGIN
+            MENUITEM "None",                        ID_SETUP_OVERLAY_NONE
+            MENUITEM "YUV",                         ID_SETUP_OVERLAY_YUV
+            MENUITEM "RGB",                         ID_SETUP_OVERLAY_RGB
+        END
+        MENUITEM "Fullscreen\tAlt+Enter",       ID_SETUP_FULLSCREEN
+        MENUITEM "Red/Blue 3D",                 ID_SETUP_REDBLUE3D
+        MENUITEM "Pause Emu\tPause",            ID_SETUP_PAUSE
+        MENUITEM "One Frame\tAlt-O",            ID_SETUP_ONEFRAME
+        MENUITEM SEPARATOR
+        MENUITEM "Screenshot\tF12",             ID_OPTIONS_SCREENSHOT
+    END
+    POPUP "Input"
+    BEGIN
+        MENUITEM "Keyboard",                    ID_INPUT_KEYBOARD
+        MENUITEM "Joystick",                    ID_INPUT_JOYSTICK
+    END
+    POPUP "State"
+    BEGIN
+        MENUITEM "Load State",                  ID_STATE_LOADSTATE
+        MENUITEM "Save State",                  ID_STATE_SAVESTATE
+        MENUITEM "Auto load/save",              ID_STATE_AUTOLOADSAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Import Meka",                 ID_STATE_IMPORT
+        MENUITEM "Export Meka",                 ID_STATE_EXPORT
+    END
+    POPUP "Sound"
+    BEGIN
+        MENUITEM "Enhance PSG",                 ID_SOUND_ENHANCEPSG
+        POPUP "Quality"
+        BEGIN
+            MENUITEM "Off",                         ID_SOUND_QUALITY_OFF
+            MENUITEM "12000hz",                     ID_SOUND_QUALITY_12000HZ
+            MENUITEM "44100hz",                     ID_SOUND_QUALITY_44100HZ
+        END
+        POPUP "VGM Log"
+        BEGIN
+            MENUITEM "Start",                       ID_SOUND_VGMLOG_START
+            MENUITEM "Stop",                        ID_SOUND_VGMLOG_STOP
+            MENUITEM "Sample accurate",             ID_SOUND_VGMLOG_SAMPLEACCURATE
+
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "O",            ID_SETUP_ONEFRAME,      VIRTKEY, ALT, NOINVERT
+    "O",            ID_SETUP_ONEFRAME,      VIRTKEY, CONTROL, ALT, NOINVERT
+    "P",            ID_SETUP_PAUSE,         VIRTKEY, ALT, NOINVERT
+    "P",            ID_SETUP_PAUSE,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "R",            ID_FILE_RESET,          VIRTKEY, ALT, NOINVERT
+    VK_F12,         ID_OPTIONS_SCREENSHOT,  VIRTKEY, NOINVERT
+    VK_PAUSE,       ID_SETUP_PAUSE,         VIRTKEY, NOINVERT
+    VK_RETURN,      ID_SETUP_FULLSCREEN,    VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      ID_SETUP_FULLSCREEN,    VIRTKEY, CONTROL, ALT, NOINVERT
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

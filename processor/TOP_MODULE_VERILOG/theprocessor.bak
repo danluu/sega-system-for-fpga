@@ -1,0 +1,50 @@
+module Processor(CLK, RESET_b, WAIT_b, WR_b, RD_b, MREQ_b, IORQ_b, NMI_b, INT_b,
+                 Data_OUT, Data_IN, Addr,
+                 // fetch side signals
+                 WAIT_F_b, Flush_b, FHRQ_b, Data_Fetch, Addr_Fetch);
+
+// general interface
+input CLK, RESET_b, WAIT_b;
+output WR_b, RD_b, MREQ_b, IORQ_b;
+input NMI_b, INT_b;
+output [7:0] Data_OUT;
+input  [7:0] Data_IN;
+output [15:0] Addr;
+
+// fetch mem interface
+input WAIT_F_b;
+output Flush_b, FHRQ_b;
+input [7:0] Data_Fetch;
+output [15:0] Addr_Fetch;
+
+// wires
+wire [38:0] Iword;    // trans - core
+wire pipestall;       // trans - core
+wire [15:0] targetPC; // trans - core
+wire intern_INT, intern_NMI; // trans - core
+wire flush;          // trans - core
+assign Flush_b = ~flush; // core - fetchmem
+
+wire IORQ, MREQ, RD, WR; // core - mem(outside)
+assign IORQ_b = ~IORQ;
+assign MREQ_b = ~MREQ;
+assign RD_b   = ~RD;
+assign WR_b   = ~WR;
+
+wire I_MREQ;  // translator - fetchmem
+assign FHRQ_b = ~I_MREQ;
+
+
+risc_core       CORE
+                (.CLK(CLK), .RST(~RESET_b), .extern_INT(~INT_b), .extern_NMI(~NMI_b), .Iword(Iword), // inputs
+                 .pipe_stall(pipe_stall), .targetPC(targetPC), .intern_INT(intern_INT), .intern_NMI(intern_NMI), .flush0(flush),  // outputs
+                 .D_addr(Addr), .D_data_in(Data_IN), .D_data_out(Data_OUT), .IORQ(IORQ), .MREQ(MREQ), .RD(RD), .WR(WR), .D_wait(~WAIT_b)); // to/from memory, active high
+                 
+
+translator_part TRANSLATOR
+                (.CLK(CLK), .RST(~RESET_b), .I_MREQ(I_MREQ), .I_wait(~WAIT_F_b), .I_addr(Addr_Fetch), .I_data(Data_Fetch),     // external interface
+                 .flush(flush), .targetPC(targetPC), .intern_NMI(intern_NMI), .intern_INT(intern_INT), .pipe_stall(pipe_stall),   // inputs from RISC core
+                 .OUT_uop(Iword));  // outputs to RISC core
+                 
+
+endmodule

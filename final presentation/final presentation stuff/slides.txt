@@ -1,0 +1,10 @@
+Slide 1 - Graphics Features
+	background flipping, horiz, vert
+	background scrolling, horiz, vert with disable for portions of screen
+	relocatable sprite table
+	64 sprites on screen out of 512 possible tiles
+	32 simultanious colors out of a total of 64 possible
+	256*192 resolution
+	sprite data interleaving to allow a single write to change the color of the whole sprite
+	generates sprite collision information
+Slide 2 - VDP_top_level_updated

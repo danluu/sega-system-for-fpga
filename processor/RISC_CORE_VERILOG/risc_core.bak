@@ -1,0 +1,104 @@
+module risc_core(pipe_stall,targetPC,intern_INT,intern_NMI,flush0, 
+							//outputs from arbitrator
+							I_wait,MREQ,RD,WR,addr,IORQ,I_waitf,data,
+							//inputs to arbitrator
+							I_addr,I_MREQ,mwait, storage,
+							CLK,RST,
+							extern_INT, extern_NMI,Iword);
+
+input [38:0] Iword;
+input	[15:0]I_addr;
+input I_MREQ;
+
+input mwait;
+input CLK, RST;
+input extern_INT, extern_NMI;
+output pipe_stall, intern_INT,intern_NMI,flush0;
+output [15:0]targetPC;
+output I_wait;
+output [7:0] storage;
+output MREQ;
+output RD;
+output WR;
+output [15:0] addr;
+output IORQ;
+output I_waitf;
+inout [7:0] data;
+
+
+
+
+
+
+//RF stage outputs
+wire [5:0] opcode_fdup;
+wire [15:0] IMM;
+wire [4:0] Wr_id_in;
+wire [7:0] Fmask_in;
+wire EOI_EXE_stage;
+wire	[15:0]Rd_data0;
+wire [4:0] Rd0_id;
+wire [15:0] Rd_data1;
+wire [4:0] Rd1_id;
+wire [15:0] PC_EXE_stage;
+wire bubble;
+wire EOI_RF_stage;
+
+//EXE stage outputs
+wire [4:0] Wr_id_out;
+wire [7:0]Fmask_out;
+wire [6:0]MEMctrl;
+wire [7:0] Flags;
+wire [15:0]Result;
+wire [15:0]Src1;
+wire [15:0]seqNPC;
+wire EOI_out;
+wire flush0;
+wire flush1;
+wire flush2;
+wire [15:0]targetPC_out;
+wire PCupdate;
+
+
+//Mem stage outputs
+
+wire [4:0] Wr_id;
+wire [7:0] Fmask;
+wire [15:0] Result_out;
+wire [7:0] Flags_out;
+wire mem_pipe_stall;
+wire paging_RQ;
+
+
+
+
+RF_Stage rf1(Iword, mem_pipe_stall, flush1, PCupdate, targetPC_out, 
+					 Wr_id, Fmask, Result_out, Flags_out,
+						 CLK, RST, 
+						//outputs
+						opcode_fdup, IMM, Wr_id_in, Fmask_in, EOI_EXE_stage, Rd_data0, 
+						Rd0_id, Rd_data1, Rd1_id,PC_EXE_stage , pipe_stall, 
+						targetPC, bubble, EOI_RF_stage);
+
+
+
+
+
+exe_stage ex1(Wr_id_in,Fmask_in,opcode_fdup,IMM,Rd_data0,Rd0_id,
+							Rd_data1,Rd1_id,PC_EXE_stage,EOI_EXE_stage,mem_pipe_stall,
+							Result_out,Wr_id,Flags_out,Fmask,paging_RQ,
+							bubble,EOI_RF_stage,CLK,RST,extern_INT, extern_NMI,
+							//outputs
+							Wr_id_out,MEMctrl,Flags,Result,Src1, seqNPC,Fmask_out,
+							EOI_out,flush0,flush1,targetPC_out,PCupdate,intern_INT, intern_NMI);		
+
+
+MEM_stage me1(Wr_id_out, Fmask_out, MEMctrl, Src1, Result, seqNPC, EOI_out, 
+							Flags, flush0, CLK, RST,
+							I_addr,I_MREQ,mwait, storage,
+							//outputs
+							Wr_id, Fmask, Result_out, Flags_out, mem_pipe_stall, paging_RQ,
+							I_wait,MREQ,RD,WR,addr,IORQ,I_waitf,data);
+		
+
+endmodule

@@ -1,0 +1,100 @@
+
+Statistics for case statements in always block at line 28 in file
+        'H:/SMS_top_design/JPC/key_register.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            37            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process 
+	in routine key_register line 28 in file
+         'H:/SMS_top_design/JPC/key_register.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    key_reg2_reg     | Flip-flop |   8   |  N  | N  | ?  | ?  | ?  | ?  | ?  |
+|     key_reg_reg     | Flip-flop |   8   |  N  | N  | ?  | ?  | ?  | ?  | ?  |
+===============================================================================
+
+key_reg2_reg<2>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<6>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<4>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<0>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<1>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<5>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<7>
+---------------
+    set/reset/toggle: none
+
+
+key_reg2_reg<3>
+---------------
+    set/reset/toggle: none
+
+
+key_reg_reg<6>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<2>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<0>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<4>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<5>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<1>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<3>
+--------------
+    set/reset/toggle: none
+
+
+key_reg_reg<7>
+--------------
+    set/reset/toggle: none
+
+
+Writing to hnl file 'H:\FINAL_PROCESSOR\SYNTHESIS/PLAN_C/workdirs/WORK/key_register.hnl'

@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: master - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Tlin\LOCALS~1\Temp\RSP398.tmp" with contents
+[
+user32.lib gdi32.lib winmm.lib ddraw.lib dsound.lib dinput.lib dxguid.lib comdlg32.lib comctl32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Dega.pdb" /debug /machine:I386 /out:"Dega.exe" /pdbtype:sept 
+.\conf.obj
+.\doze_554.obj
+.\emu.obj
+.\frame.obj
+.\load.obj
+.\main.obj
+.\micro_inst.obj
+.\misc.obj
+.\run.obj
+.\state.obj
+.\z80_decoder.obj
+.\z80_I_run.obj
+.\z80_uOP_run.obj
+.\dinp.obj
+.\disp.obj
+.\dsound.obj
+.\input.obj
+.\loop.obj
+.\render.obj
+.\shot.obj
+.\app.res
+.\zlib.lib
+\emulator\VDP_\mast\mast.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\Tlin\LOCALS~1\Temp\RSP398.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4098: defaultlib "LIBCMT" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+dega.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

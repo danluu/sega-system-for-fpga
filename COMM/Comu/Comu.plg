@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Comu - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Debug/Comu.res" /d "_DEBUG" "H:\COMM\Comu\Comu.rc"" 
+Creating temporary file "C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33C.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Comu.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\COMM\Comu\ComCfg.cpp"
+"H:\COMM\Comu\CommThread.cpp"
+"H:\COMM\Comu\Comu.cpp"
+"H:\COMM\Comu\ComuDoc.cpp"
+"H:\COMM\Comu\ComuView.cpp"
+"H:\COMM\Comu\GetNum.cpp"
+"H:\COMM\Comu\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33C.tmp" 
+Creating temporary file "C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33D.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Comu.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\COMM\Comu\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33D.tmp" 
+Creating temporary file "C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Comu.pdb" /debug /machine:I386 /out:"Debug/Comu.exe" /pdbtype:sept 
+.\Debug\ComCfg.obj
+.\Debug\CommThread.obj
+.\Debug\Comu.obj
+.\Debug\ComuDoc.obj
+.\Debug\ComuView.obj
+.\Debug\GetNum.obj
+.\Debug\MainFrm.obj
+.\Debug\StdAfx.obj
+.\Debug\Comu.res
+]
+Creating command line "link.exe @C:\DOCUME~1\tlin\LOCALS~1\Temp\RSP33E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ComCfg.cpp
+CommThread.cpp
+Comu.cpp
+ComuDoc.cpp
+ComuView.cpp
+GetNum.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Comu.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

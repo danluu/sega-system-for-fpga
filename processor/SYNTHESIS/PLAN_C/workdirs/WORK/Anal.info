@@ -1,0 +1,9 @@
+file {
+  .version = 1;
+  entity {
+    .name = "SMS_top_design";
+    .mra_file = "SMS_top_design.mra";
+    .arch = {"verilog"};
+    .syn_files = {"SMS_top_design%verilog.syn", "SMS_top_design%verilog__verilog.syn"};
+   }
+}

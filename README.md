@@ -3,3 +3,5 @@ I found this zip file from many years ago on my old laptop that I was giving awa
 The only bug I can recall was that in Double Dragon, the heads and torsos on some characters would be swapped, but that probably indicates that other games don't work perfectly, even if the bugs aren't as visually obvious.
 
 The architecture is a simple six stage pipeline. The major difference between our design and a standard five stage pipeline is that we translate Z80 ops into RISC uops and execute them on a small RISC core. There's a one stage queue between the translation and the RISC front-end, because we can generate multiple RISC uops per Z80 op.
+
+After looking more closely at this archive, it appears to be missing a few things. Not too surprising, considering my backup and archival practices as a teenager. I suspect I won't fill in the blanks any time soon; pull requests welcome, though.
